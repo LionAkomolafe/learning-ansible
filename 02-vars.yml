@@ -39,6 +39,7 @@
 - name: Declare a Fact
   hosts: all
   connection: local
+  gather_facts: false
   tasks:
     - name: Print FACT
       ansible.builtin.debug:
