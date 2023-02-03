@@ -36,11 +36,22 @@
       ansible.builtin.debug:
         msg: URL = {{ URL }}
 
-- name: Declare a Fact
+- name: Access a Fact
   hosts: all
   connection: local
-  gather_facts: false
   tasks:
     - name: Print FACT
       ansible.builtin.debug:
         msg: Hostname = {{ ansible_hostname }}
+
+- name: Execute a command
+  hosts: all
+  connection: local
+  tasks:
+    - name: Execute an uptime command
+      ansible.builtin.shell: uptime
+      register: out
+
+    - name: Print out
+      ansible.builtin.debug:
+        msg: "{{out}}"
