@@ -5,3 +5,26 @@
       when: Hello is defined
       ansible.builtin.debug:
         msg: Hello
+
+# Conditions
+# 1. String Comparison
+# when: var == "string"
+# when: var != "string"
+
+# 2. Number Comparison
+# when: var == 7
+# when: var > 7
+# when: var < 7
+# when: var != 7
+
+# 3. Boolean Comparison
+# when: var
+### above condition will run if var is true
+
+# 4. Variable Declarations
+# when: var is defined
+# when: var is not defined
+
+# 5. Multi Conditions
+# when: var is defined and var > 10
+# when: var is defined or var > 10
