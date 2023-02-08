@@ -1,7 +1,7 @@
 - name: Demo on conditions
   hosts: localhost
   tasks:
-    - name: Print Hello if variable hello is defined
+    - name: Print Hello if variable is defined
       when: Hello is defined
       ansible.builtin.debug:
         msg: Hello
