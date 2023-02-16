@@ -1,0 +1,5 @@
+- name: Print a parameter store
+  hosts: localhost
+  tasks:
+    ansible.buitlin.debug:
+      msg: "{{ lookup('asw_ssm', 'param.dev.catalogue.MONGO', region=us-east-1') }}"
