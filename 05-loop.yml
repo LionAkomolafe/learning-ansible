@@ -1,0 +1,9 @@
+- name: Demon On Loops
+  hosts: localhost
+  tasks:
+    - name: print a loop
+      ansible.builtin.debug:
+        msg: "Fruit Name - {{item}}"
+      loop:
+        - apple
+        - orange
